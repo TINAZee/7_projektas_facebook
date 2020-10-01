@@ -7,7 +7,7 @@ body {
 
 }
 
-header {
+body > header {
     grid-area: hed;
     background-color: blue;
     
@@ -21,7 +21,7 @@ header {
     grid-area: msg;
 }
 
-main {
+body > main {
     grid-area: feed;
     background-color: rgb(167, 186, 186);
     padding: 40px;
