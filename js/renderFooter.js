@@ -1,6 +1,4 @@
-function renderFooter(data) {
-    return
-    `<footer>
+function renderFooter(data) { return `<footer>
         LIKE + COMMENT
     </footer>` 
 }
