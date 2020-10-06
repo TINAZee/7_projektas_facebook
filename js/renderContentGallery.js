@@ -7,11 +7,27 @@ function renderContentGallery(data) {
     }
     //logika
     const maxgallerySize = 4;
-    const visiblephotoCount = data.length > maxgallerySize ? maxgallerySize : data.length;
+    const totalPhotosCount = data.length;
+    const visiblephotoCount = totalPhotosCount > maxgallerySize ? maxgallerySize : totalPhotosCount;
 
-    let imagesHTML = " ";
+    let extraAttribute = '';
+    if (totalPhotosCount > maxgallerySize) {
+        extraAttribute = `data-extra="${totalPhotosCount - maxgallerySize}`;
+    }
+
+    let imagesHTML = '';
     for (let i = 0; i < visiblephotoCount; i++) {
-        imagesHTML += `<img src="./img/posts/${data[i]}" alt="User post Gallery Pictures">`
+        if (i === visiblephotoCount - 1) {
+            imagesHTML += `<div class="img" ${extraAttribute}">
+                                <img src="./img/posts/${data[i]}"
+                                    alt="User post gallery picture">
+                            </div>`;
+        } else {
+            imagesHTML += `<div class="img" >
+                                <img src="./img/posts/${data[i]}"
+                                    alt="User post gallery picture">
+                            </div>`;
+        }
     }
 
     return `<div class="gallery gallery-${visiblephotoCount}">
