@@ -20,7 +20,10 @@ function renderContentText(text) {
         for (let i = 0; i < 300; i++) {
             shortedtext += text[i];
         }
-        return `<p>${shortedtext}...<span class="more">See more</span></p>`;
+        return `<p>${shortedtext}...<span class="more">See more</span></p>
+                <p class="hidden">${text}</p>`;
+        
+        
     }
     
 }
