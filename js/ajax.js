@@ -5,7 +5,7 @@ function ajax(callback) {
             callback(JSON.parse(this.responseText));
         }
     };
-    xhttp.open("GET", "https://github.com/TINAZee/7_projektas_facebook/blob/master/js/data.json", true);
+    xhttp.open("GET", "https://front-end-by-rimantas.github.io/18b-grupe-facebook/js/data.json", true);
     xhttp.send();
 }
 
